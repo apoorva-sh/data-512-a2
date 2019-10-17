@@ -2,7 +2,11 @@
 
 ## Project Goal
 
-The goal of this project is to look at possible biases in data. This notebook analyzes data from world population data in 2018, and wikipedia English article page on politicians. Check out the [ipynb file](https://github.com/apoorva-sh/data-512-a2/blob/master/hcds-a2-bias.ipynb) to run this project/ see how the data was generated.
+The goal of this project is to look at possible biases in data. This notebook analyzes data from world population data in 2018, and wikipedia English article page on politicians. Check out the [ipynb file](https://github.com/apoorva-sh/data-512-a2/blob/master/hcds-a2-bias.ipynb) to see how the final data was generated, and the conclusions in the last section of the Readme were reached.
+
+## Running the code
+
+To run this code, clone the repository and in the project directory run the command `jupyter notebook`. Navigate to the .ipynb file in the jupyter console, and run the notebook to reproduce the results. 
 
 ## API Documentation
 One API has been used in this project:
@@ -86,8 +90,19 @@ This csv contains the ORES quality categorization for an article
 
 
 ## Conclusion and Reflections
+### Take away from this project
+- Data overlaps in a multitude of ways, and looking at your data from a singular point of view can hide the overall picture the data can draw.  
+- Documenting your thought process can be more difficult than it seems. Some workflows seem natural to me, but I found myself over-explaining simple steps, which probably isn't the greatest approach but maybe better than just code without explanation
 
-## License
+### Analysis conclusions
+- On reading the problem statement, the idea of looking at population proportion to wikipedia articles seemed interesting to me, the idea that having a large populous could affect the number of political articles generated from that area seemed implausible to me. On looking at the lowest ranked countries by article to population ratio, I did find that incredibly higher populated countries did skew this data, countries like China, India and Indonesia both had an incredibly high population and as a function of that had very low article to population percentage. A future researcher could maybe filter out the heavy hitters in terms of population to get a better understanding of article to population ratio.
+- Looking at the overall number of high quality articles, it is seen that countries with English as their native langauge did rank high in that department alone, however looking at the percentages these countries don't even appear in the top ten which was interesting to me, I guess countries with politically heavy climates with few articles (WELL WRITTEN HOWEVER) ranked higher when looking at the percentages.
+
+### Other possible sources of bias
+- Reading into the [ORES documentation](https://www.mediawiki.org/wiki/ORES), an interesting point in how an article is categorized as "good quality" is mentioned [here](https://www.mediawiki.org/wiki/ORES#Assessment_scale_support), this model seems more concerned about the structural soundness of an article in contrast to it's tone or vocabulary, which seemed a little problematic to me. A high quality article need not just be well cited, there is scope for a lot of false positives in such a situation.
+- Finally, the political article data is just taken from English articles which may reduce the overall article count and miss out on other "high quality" non-english articles. (This could affect non-English speaking countries' score for high quality article ratio.
+
+## Licenses
 
 - The Source Code is under the [MIT License](https://github.com/apoorva-sh/data-512-a2/blob/master/LICENSE)
 - Wikipedia English-language political data is under the [CC BY 4.0 LICENSE](https://creativecommons.org/licenses/by/4.0/)
